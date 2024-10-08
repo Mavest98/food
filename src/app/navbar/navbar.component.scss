@@ -1,0 +1,24 @@
+/* Navbar Custom Styling */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ff5722 !important; /* Custom hover color */
+}
+
+.navbar-toggler-icon {
+  background-color: #ff5722; /* Custom mobile menu button color */
+}

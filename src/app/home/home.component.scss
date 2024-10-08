@@ -1,0 +1,72 @@
+// /* Animations */
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes slideInUp {
+//   from {
+//     transform: translateY(50px);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+
+// /* Applying the animations */
+// .animate-fade-in {
+//   animation: fadeIn 1.5s ease-in-out;
+// }
+
+// .animate-slide-in-up {
+//   animation: slideInUp 1s ease-in-out;
+// }
+
+// /* Hover effects for buttons and images */
+// .hover\:shadow-xl:hover {
+//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+// }
+
+// .hover\:scale-105:hover {
+//   transform: scale(1.05);
+// }
+
+// .transition {
+//   transition: all 0.3s ease-in-out;
+// }
+
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 1s ease-in-out;
+  }
