@@ -1,33 +1,29 @@
+// .menu-card {
+//   transition: transform 0.3s ease;
+//   border-radius: 10px;
+// }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+// .menu-card:hover {
+//   transform: scale(1.03); /* Slight scale-up on hover */
+// }
 
-  @keyframes slideInUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+// .menu-img {
+//   height: 150px; /* Set a smaller height for images */
+//   object-fit: cover; /* Ensures the image covers the container without stretching */
+//   width: 100%; /* Ensures the image takes the full width of the card */
+//   border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+// }
 
-  .animate-fade-in {
-    animation: fadeIn 1s ease-in-out;
-  }
+// .card-body {
+//   text-align: center;
+// }
 
-  .animate-slide-in-up {
-    animation: slideInUp 1s ease-in-out;
-  }
+// .btn-primary {
+//   background-color: #007bff;
+//   transition: background-color 0.3s ease, transform 0.2s ease;
+// }
 
-  /* Spacing between social media icons */
-  .footer .social-icons a {
-    margin: 0 15px;
-  }
+// .btn-primary:hover {
+//   background-color: #0056b3;
+//   transform: scale(1.05); /* Button scaling effect on hover */
+// }

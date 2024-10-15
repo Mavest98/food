@@ -43,6 +43,16 @@
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
         </li>
+        <!-- Cart Icon with Badge -->
+        <li class="nav-item">
+          <a class="nav-link position-relative" routerLink="/cart">
+            <i class="fas fa-shopping-cart"></i>
+            <!-- Cart Badge -->
+            <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">
+              {{ cartItemCount }}
+            </span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>

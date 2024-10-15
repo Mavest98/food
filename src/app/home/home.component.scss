@@ -1,49 +1,15 @@
-// /* Animations */
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes slideInUp {
-//   from {
-//     transform: translateY(50px);
-//     opacity: 0;
-//   }
-//   to {
-//     transform: translateY(0);
-//     opacity: 1;
-//   }
-// }
-
-// /* Applying the animations */
-// .animate-fade-in {
-//   animation: fadeIn 1.5s ease-in-out;
-// }
-
-// .animate-slide-in-up {
-//   animation: slideInUp 1s ease-in-out;
-// }
-
-// /* Hover effects for buttons and images */
-// .hover\:shadow-xl:hover {
-//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-// }
-
-// .hover\:scale-105:hover {
-//   transform: scale(1.05);
-// }
-
-// .transition {
-//   transition: all 0.3s ease-in-out;
-// }
-
-
+//CSS for Animations and Styling
 
   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDelay {
     from {
       opacity: 0;
     }
@@ -67,6 +33,44 @@
     animation: fadeIn 1s ease-in-out;
   }
 
+  .animate-fade-in-delay {
+    animation: fadeIn 1s ease-in-out 0.5s;
+  }
+
   .animate-slide-in-up {
     animation: slideInUp 1s ease-in-out;
+  }
+
+  .animate-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .animate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .img-fluid {
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .blockquote-footer {
+    font-size: 0.9rem;
+    color: #999;
   }

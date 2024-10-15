@@ -1,87 +1,164 @@
-
-
-<!-- Featured Menu Section -->
 <section id="menu" class="py-5 bg-light">
   <div class="container text-center">
     <h2 class="mb-5">Our Menu</h2>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <img src="assets/tbone-steak.jpg" alt="T-Bone Steak" class="card-img-top">
+      <!-- Menu Items -->
+      <div class="col-md-4" *ngFor="let item of foodItems">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img [src]="item.image" alt="{{ item.name }}" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
           <div class="card-body">
-            <h5 class="card-title">T-Bone Steak</h5>
-            <p class="card-text">Tender T-bone steak cooked to perfection. <strong>R150</strong></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <img src="assets/roasted-chicken.jpg" alt="Roasted Chicken" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">Roasted Chicken</h5>
-            <p class="card-text">Juicy and flavorful roasted chicken. <strong>R120</strong></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <img src="assets/lamb-chops.jpg" alt="Lamb Chops" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">Lamb Chops</h5>
-            <p class="card-text">Succulent lamb chops served with herbs. <strong>R180</strong></p>
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">{{ item.description }} <strong>R{{ item.price }}</strong></p>
+            <!-- Add to Cart Button -->
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Call to Action Section -->
-<section class="cta-section py-5 bg-primary text-white text-center">
-  <div class="container">
-    <h2>Ready to Savor Delicious Meals?</h2>
-    <p>Order now or visit our restaurant for a unique dining experience.</p>
-    <a href="#" class="btn btn-light mt-3">Order Now</a>
-  </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials-section py-5 text-center bg-light">
-  <div class="container">
-    <h2 class="mb-5">What Our Customers Say</h2>
+    <!-- Specials Section -->
+    <h2 class="my-5">Our Specialties</h2>
     <div class="row">
       <div class="col-md-4">
-        <blockquote class="blockquote">
-          <p>"The best T-bone steak I've ever had! Perfectly cooked and seasoned."</p>
-          <footer class="blockquote-footer">John Doe</footer>
-        </blockquote>
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/special-1.jpg" alt="Yummy Burger" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Yummy Burgers</h5>
+            <p class="card-text">Freshly made burgers with veggie and chicken options.</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-4">
-        <blockquote class="blockquote">
-          <p>"Amazing roasted chicken and great service. I highly recommend!"</p>
-          <footer class="blockquote-footer">Jane Smith</footer>
-        </blockquote>
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/special-2.jpg" alt="Yummy Sandwich" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Yummy Sandwiches</h5>
+            <p class="card-text">Sliced cheese and vegetable, fruits, or meat grilled to perfection.</p>
+          </div>
+        </div>
       </div>
       <div class="col-md-4">
-        <blockquote class="blockquote">
-          <p>"Lamb chops were outstanding. Perfect for a family dinner!"</p>
-          <footer class="blockquote-footer">Sarah Lee</footer>
-        </blockquote>
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/special-3.jpg" alt="Healthy Box" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Healthy Box</h5>
+            <p class="card-text">A healthy mix of lettuce, broccoli, and grilled chicken.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Menu Items -->
+    <div class="row mt-5">
+      <!-- Example: Burger -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/meat/images.jpeg" alt="Burger" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Yummy Burger</h5>
+            <p class="card-text">Delicious burger served fresh. <strong>R30</strong></p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Menu Items (Burger with Chips, Wings, Combo, etc.) -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/meat/download.jpeg" alt="Burger with Chips" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Burger with Chips</h5>
+            <p class="card-text">Burger served with crispy chips. <strong>R40</strong></p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/meat/images (1).jpeg" alt="Wings" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Wings</h5>
+            <p class="card-text">Flavorful wings cooked to perfection. <strong>R25</strong></p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combo Meal -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/meat/IMG-20240911-WA0045_d54TX0r-thumbnail-600x600-95.webp" alt="Combo Meal" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Combo Meal</h5>
+            <p class="card-text">Burger, chips, and 4 wings. <strong>R80</strong></p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hot Dog Vienna -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/meat/images (2).jpeg" alt="Hot Dog Vienna" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Hot Dog Vienna</h5>
+            <p class="card-text">Classic hot dog with Vienna sausage. <strong>R10</strong></p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hot Dog and Chips -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="assets/meat/images (4).jpeg" alt="Hot Dog and Chips" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Hot Dog and Chips</h5>
+            <p class="card-text">Hot dog served with crispy chips. <strong>R25</strong></p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Original Specialties -->
+    <div class="row mt-5">
+      <!-- Beef -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="/assets/meat/FoodMeat.jpg" alt="Beef" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Premium Beef</h5>
+            <p class="card-text">Sourced from the best local farms, our beef is tender and flavorful.</p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chicken -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="/assets/meat/FoodMeat.jpg" alt="Chicken" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Organic Chicken</h5>
+            <p class="card-text">Raised naturally, our chicken products are free from antibiotics.</p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lamb -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm menu-card animate-card">
+          <img src="/assets/meat/FoodMeat.jpg" alt="Lamb" class="card-img-top img-fluid rounded-top menu-img" style="height: 250px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Grass-fed Lamb</h5>
+            <p class="card-text">Our lamb is sourced from trusted farmers, providing the best quality cuts.</p>
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Footer Section -->
-<footer class="bg-dark text-white py-4">
-  <div class="container text-center">
-    <p>&copy; 2024 Pootjie Eatery | All Rights Reserved</p>
-    <div class="d-flex justify-content-center mt-3">
-      <a href="#" class="text-white mx-4"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="text-white mx-4"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="text-white mx-4"><i class="fab fa-instagram"></i></a>
-    </div>
-  </div>
-</footer>
-
-

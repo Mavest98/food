@@ -1,0 +1,60 @@
+ //CSS for Animations and Hover Effects
+
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Animation classes */
+  .animate-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .animate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .animate-img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: slideInUp 1s ease-in-out;
+  }
+
+  .animate-img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .img-fluid {
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }

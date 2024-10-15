@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -19,8 +20,13 @@ const routes: Routes = [
   {path: 'newsletter', component: NewsletterComponent},
   {path: 'services', component: ServicesComponent},
   {path: 'footer', component: FooterComponent},
-  {path: 'specials', component: SpecialsComponent}
-];
+  {path: 'specials', component: SpecialsComponent},
+  { path: 'menu', component: MenuComponent },
+  { path: 'cart', component: CartComponent },
+  { path: '', redirectTo: '/menu', pathMatch: 'full' }
+  ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
