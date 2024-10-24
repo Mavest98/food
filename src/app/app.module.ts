@@ -15,6 +15,10 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OrderComponent } from './order/order.component';
 import { CartComponent } from './cart/cart.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ManageOrdersComponent } from './admin/manage-orders/manage-orders.component';
+import { ManageProductsComponent } from './admin/manage-products/manage-products.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { CartComponent } from './cart/cart.component';
     FooterComponent,
     NavbarComponent,
     OrderComponent,
-    CartComponent
+    CartComponent,
+    DashboardComponent,
+    ManageOrdersComponent,
+    ManageProductsComponent,
   ],
   imports: [
     BrowserModule,

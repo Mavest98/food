@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
-import { CartService, CartItem } from '../cart.service'; // Correct import
+import { CartService, CartItem } from '../cart.service';
 
 @Component({
   selector: 'app-cart',
-  templateUrl: './cart.component.html',
+  templateUrl: './cart.component.html'
 })
 export class CartComponent {
-  cartItems: CartItem[] = []; // Define the cartItems array as CartItem[]
+  cartItems: CartItem[] = [];
 
   constructor(private cartService: CartService) {
-    this.cartItems = this.cartService.getItems(); // Get items from the cart service
+    this.cartItems = this.cartService.getItems();
   }
 
   removeFromCart(item: CartItem) {
-    this.cartService.removeFromCart(item); // Remove item from cart using service
-    this.cartItems = this.cartService.getItems(); // Refresh the cart items after removal
+    this.cartService.removeFromCart(item);
+    this.cartItems = this.cartService.getItems();
   }
 
-  getTotal() {
-    return this.cartService.getTotal(); // Calculate the total price using the cart service
+  getTotal(): number {
+    return this.cartService.getTotal();
   }
 }

@@ -1,0 +1,7 @@
+<h2>Manage Orders</h2>
+<ul>
+  <li *ngFor="let order of orders">
+    <strong>{{ order.name }}</strong> - {{ order.status }}
+    <button (click)="updateStatus(order, 'Delivered')">Mark as Delivered</button>
+  </li>
+</ul>
