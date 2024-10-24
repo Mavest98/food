@@ -1,68 +1,17 @@
-<!-- Additional Specialties (Burgers, Wings, Combo, Hot Dogs) -->
-<div class="row mt-5">
-  <!-- Burger -->
-  <div class="col-md-4">
-    <div class="card product-card mb-4 shadow-sm animate-card">
-      <img src="assets/meat/images.jpeg" class="card-img-top img-fluid rounded-top animate-img" alt="Burger">
-      <div class="card-body">
-        <h5 class="card-title">Yummy Burger</h5>
-        <p class="card-text">Delicious burger served fresh. <strong>R30</strong></p>
-      </div>
-    </div>
-  </div>
-  <!-- Burger with Chips -->
-  <div class="col-md-4">
-    <div class="card product-card mb-4 shadow-sm animate-card">
-      <img src="assets/meat/download.jpeg" class="card-img-top img-fluid rounded-top animate-img" alt="Burger with Chips">
-      <div class="card-body">
-        <h5 class="card-title">Burger with Chips</h5>
-        <p class="card-text">Burger served with crispy chips. <strong>R40</strong></p>
-      </div>
-    </div>
-  </div>
-  <!-- Wings -->
-  <div class="col-md-4">
-    <div class="card product-card mb-4 shadow-sm animate-card">
-      <img src="assets/meat/images (1).jpeg" class="card-img-top img-fluid rounded-top animate-img" alt="Wings">
-      <div class="card-body">
-        <h5 class="card-title">Wings</h5>
-        <p class="card-text">Flavorful wings cooked to perfection. <strong>R25</strong></p>
+<div class="container py-5">
+  <h2 class="text-center mb-5">Specials</h2>
+  <!-- Additional Specialties (Burgers, Wings, Combo, Hot Dogs) -->
+  <div class="row mt-5">
+    <!-- Burger -->
+    <div class="col-md-4" *ngFor="let item of foodItems">
+      <div class="card product-card mb-4 shadow-sm animate-card">
+        <img src="/assets/WhatsApp Image 2024-10-15 at 11.12.42_49305c11.jpg" class="card-img-top img-fluid rounded-top animate-img" [alt]="item.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }} <strong>R{{ item.price }}</strong></p>
+          <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<div class="row mt-3">
-  <!-- Combo Meal -->
-  <div class="col-md-4">
-    <div class="card product-card mb-4 shadow-sm animate-card">
-      <img src="assets/meat/IMG-20240911-WA0045_d54TX0r-thumbnail-600x600-95.webp" class="card-img-top img-fluid rounded-top animate-img" alt="Combo Meal">
-      <div class="card-body">
-        <h5 class="card-title">Combo Meal</h5>
-        <p class="card-text">Burger, chips, and 4 wings. <strong>R80</strong></p>
-      </div>
-    </div>
-  </div>
-  <!-- Hot Dog Vienna -->
-  <div class="col-md-4">
-    <div class="card product-card mb-4 shadow-sm animate-card">
-      <img src="assets/meat/images (2).jpeg" class="card-img-top img-fluid rounded-top animate-img" alt="Hot Dog Vienna">
-      <div class="card-body">
-        <h5 class="card-title">Hot Dog Vienna</h5>
-        <p class="card-text">Classic hot dog with Vienna sausage. <strong>R10</strong></p>
-      </div>
-    </div>
-  </div>
-  <!-- Hot Dog and Chips -->
-  <div class="col-md-4">
-    <div class="card product-card mb-4 shadow-sm animate-card">
-      <img src="assets/meat/images (4).jpeg" class="card-img-top img-fluid rounded-top animate-img" alt="Hot Dog and Chips">
-      <div class="card-body">
-        <h5 class="card-title">Hot Dog and Chips</h5>
-        <p class="card-text">Hot dog served with crispy chips. <strong>R25</strong></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-

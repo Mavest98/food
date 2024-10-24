@@ -6,12 +6,12 @@ import { CartService, CartItem } from '../cart.service';
   templateUrl: './navbar.component.html'
 })
 export class NavbarComponent implements OnInit {
-  cartItemCount: number = 0;
+  cartItemCount = 0;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
-    this.cartService.items$.subscribe((items: CartItem[]) => {
+    this.cartService.items$.subscribe(items => {
       this.cartItemCount = items.reduce((count, item) => count + item.quantity, 0);
     });
   }

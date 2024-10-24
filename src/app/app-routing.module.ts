@@ -33,6 +33,14 @@ const routes: Routes = [
   { path: 'specials', component: SpecialsComponent },
   { path: 'cart', component: CartComponent },
   { path: '', redirectTo: '/menu', pathMatch: 'full' },
+  {path: 'admin/manage-orders',component: ManageOrdersComponent},
+  { path: 'admin/orders', component: ManageOrdersComponent },
+  { path: 'admin/products', component: ManageProductsComponent },
+
+
+
+
+
 
   // Admin routes
   { path: 'admin', component: DashboardComponent, canActivate: [AuthGuard] },

@@ -5,12 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './manage-orders.component.html'
 })
 export class ManageOrdersComponent implements OnInit {
-  orders: any[] = [];  // Fetch this from backend or mock data
+  orders: any[] = [];  // Ideally, fetch this from a service in the future
 
   constructor() {}
 
   ngOnInit(): void {
-    // Load orders from API or mock
+    // Example orders data (could be replaced with an API call later)
     this.orders = [
       { id: 1, name: 'Order 1', status: 'Pending' },
       { id: 2, name: 'Order 2', status: 'Delivered' }
@@ -19,5 +19,7 @@ export class ManageOrdersComponent implements OnInit {
 
   updateStatus(order: any, status: string) {
     order.status = status;
+    alert(`${order.name} is now marked as ${status}`);
+    // You can also call a service to update the order status in the backend
   }
 }

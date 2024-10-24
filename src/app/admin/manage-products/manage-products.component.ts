@@ -7,24 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageProductsComponent implements OnInit {
 
-  // Define products array
   products: any[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-    // Example data
+    // Updated data for products
     this.products = [
-      { id: 1, name: 'Pizza', price: 10.00, stock: 20 },
-      { id: 2, name: 'Burger', price: 5.00, stock: 50 }
+      { id: 1, name: 'Burger', description: 'Delicious burger served fresh.', price: 30, quantity: 1 },
+      { id: 2, name: 'Burger with Chips', description: 'Burger served with crispy chips.', price: 40, quantity: 1 },
+      { id: 3, name: 'Wings', description: 'Flavorful wings cooked to perfection.', price: 25, quantity: 1 },
+      { id: 4, name: 'Combo Meal', description: 'Burger, fries, & 4 wings', price: 80, quantity: 1 },
+      { id: 5, name: 'Hot Dog & Vienna', description: 'Vienna', price: 10, quantity: 1 },
+      { id: 6, name: 'Hot Dog & Sausage', description: 'Sausage', price: 15, quantity: 1 },
+      { id: 7, name: 'Hot Dog & Fries', description: 'With Fries', price: 25, quantity: 1 }
     ];
   }
 
-  // Update status method
-  updateStatus(productId: number, newPrice: number) {
+
+  updatePrice(productId: number, newPrice: number) {
     const product = this.products.find(p => p.id === productId);
     if (product) {
       product.price = newPrice;
+      alert(`${product.name} price updated to $${newPrice}`);
     }
   }
 }

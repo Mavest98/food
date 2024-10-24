@@ -3,7 +3,8 @@
   <ul>
     <li *ngFor="let product of products">
       <strong>{{ product.name }}:</strong> ${{ product.price }}
-      <button (click)="updateStatus(product.id, 20)">Update Price</button>
+      <span> (Stock: {{ product.stock }})</span>
+      <button (click)="updatePrice(product.id, product.price + 5)">Increase Price by $5</button>
     </li>
   </ul>
 </div>
